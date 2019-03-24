@@ -6,9 +6,9 @@ const GiftCardsRoll = ({ data: { allMarkdownRemark: { edges: posts } } }) => (
   <div className="columns is-multiline">
     {posts &&
       posts.map(({ node: { id, fields: { slug }, frontmatter: { title, templateKey, image } } }) => (
-        <div className="is-parent column is-4" key={id}>
+        <div className="column is-narrow" key={id}>
           <Link to={slug}>
-            <figure>
+            <figure className="image gift-card">
               <img
                 src={image.childImageSharp ? image.childImageSharp.fluid.src : image}
                 alt={title}
