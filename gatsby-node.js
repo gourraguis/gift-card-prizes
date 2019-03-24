@@ -77,11 +77,27 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   fmImagesToRelative(node) // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
+    let value = createFilePath({ node, getNode })
+    if (node.frontmatter.templateKey === 'gift-card-post') {
+      //  change permalink to match old website
+      const giftCardName = /\/giftcards\/([^]+)\//.exec(value)[1]
+      createNodeField({
+        name: `slug`,
+        node,
+        value: `${giftCardName}-gift-card-free-generator/`
+      })
+      //  Add sugar to gift card niche name
+      createNodeField({
+        name: `title`,
+        node,
+        value: `Free ${node.frontmatter.title} Gift Card Unused Codes Generator 2019`
+      })
+    } else {
+      createNodeField({
+        name: `slug`,
+        node,
+        value,
+      })
+    }
   }
 }

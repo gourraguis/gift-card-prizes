@@ -5,10 +5,10 @@ import { Link, graphql, StaticQuery } from "gatsby"
 const GiftCardsRoll = ({ data: { allMarkdownRemark: { edges: posts } } }) => (
   <div className="columns is-multiline">
     {posts &&
-      posts.map(({ node: { id, fields: { slug }, frontmatter: { title, templateKey, image } } }) => (
-        <div className="is-parent column is-4" key={id}>
+      posts.map(({ node: { id, fields: { slug, title }, frontmatter: { templateKey, image } } }) => (
+        <div className="column is-narrow" key={id}>
           <Link to={slug}>
-            <figure>
+            <figure className="image gift-card">
               <img
                 src={image.childImageSharp ? image.childImageSharp.fluid.src : image}
                 alt={title}
@@ -39,9 +39,9 @@ const GiftCardsRollContainer = () => (
               id
               fields {
                 slug
+                title
               }
               frontmatter {
-                title
                 templateKey
                 image {
                   childImageSharp {

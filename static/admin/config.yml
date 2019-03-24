@@ -13,6 +13,7 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "gift-card-post"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
       - {label: "SEO Value", name: "seoValue", widget: "number", default: 1, valueType: "int"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: Image, name: image, widget: image}
