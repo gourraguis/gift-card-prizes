@@ -18,7 +18,6 @@ const GiftCardsRoll = ({ data: { allMarkdownRemark: { edges: posts } } }) => (
         </div>
       ))
     }
-    <p>lalalala</p>
   </div>
 )
 
