@@ -72,12 +72,12 @@ export const IndexPageTemplate = ({
             <div className="column is-10 is-offset-1">
               <div className="content">
                 <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
+                  {mainpitch.sections.map(({ title, text }) => (
+                    <>
+                    {title && <h2 className="title is-uppercase">{title}</h2>}
+                      <p>{text}</p>
+                    </>
+                  ))}
                 </div>
                 <div className="columns">
                   <div className="column is-12">
@@ -170,8 +170,10 @@ export const pageQuery = graphql`
         heading
         subheading
         mainpitch {
-          title
-          description
+          sections {
+            title
+            text
+          }
         }
         description
         intro {

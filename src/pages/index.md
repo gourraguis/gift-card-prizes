@@ -10,13 +10,41 @@ description: >-
   roasting and brewing seriously and we’re glad to pass that knowledge to
   anyone.
 mainpitch:
-  title: Why Kaldi
-  description: >
-      Kaldi is the coffee store for everyone who believes that
-      great coffee shouldn't just taste good, it should do good
-      too. We source all of our beans directly from small scale
-      sustainable farmers and make sure part of the profits are
-      reinvested in their communities.
+  sections:
+    - title: How to get free gift cards?
+      text: >
+        By using Gift Card Prizes, you are open to an endless world of possibilities. Just choose which gift card you 
+        prefer and if you can’t find it listed, please contact us and we will try to add it within a month or less to 
+        our system.
+    - title:
+      text: >
+        You might be telling yourself now that this is just another fake website that doesn't work like many others 
+        in the internet, but there’s where you went wrong my friend, here at Gift Card Prizes we started giving free 
+        gift cards since 2004 (that can be verified by checking whois records). We are experts in getting free gift 
+        cards for free better than anyone else in the market, and while everyone else gave up and stopped working 
+        we're as good as we ever been.
+    - title:
+      text: >
+        Whether you want gift cards, vouchers, or special codes for a specific service that cost money, get in touch 
+        with us and we will make a way for you to get it for free. Because once we lose our freedom, we have nothing 
+        left on this world, that is why we fight the big companies every day.
+    - title:
+      text: >
+        Whether you fancy gift cards, vouchers, or coupon codes for a named service that is costly, Use our website and 
+        get whatever you want for free. Because once we lose our right to be free, we are left with nothing in this 
+        world, that is why we declared war on big corporations. Generate free gift cards for any of the available 
+        providers.
+    - title:
+      text: >
+        Note that we only can generate a limited number of cards per day. In nothing left please make sure to come 
+        back the next day earlier, in case you need support using our website please get in touch and contact us.
+    - title: how can you give gift card codes & vouchers for free?
+      text: >
+        We use some complex algorithms that are optimised to produce new clean gift card codes, then we test these 
+        generated codes against the service data to verify if they work, we test thousands if not millions of codes 
+        per second thanks to the powerful infrastructure we use, that’s why it doesn't take too much time to find one 
+        that actually works. Obviously the method is a bit different for each app or service, but that is the general 
+        approach if we don’t want to dive too much into details.
 intro:
   blurbs:
     - image: /img/coffee.png
