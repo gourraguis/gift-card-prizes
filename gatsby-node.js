@@ -86,6 +86,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         node,
         value: `${giftCardName}-gift-card-free-generator/`
       })
+      //  Add sugar to gift card niche name
+      createNodeField({
+        name: `title`,
+        node,
+        value: `${node.frontmatter.title} Gift Card Free Generator`
+      })
     } else {
       createNodeField({
         name: `slug`,
