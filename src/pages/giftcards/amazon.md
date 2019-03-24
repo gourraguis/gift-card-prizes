@@ -2,6 +2,7 @@
 templateKey: gift-card-post
 title: Amazon
 seoValue: 1
+date: 2019-03-24T11:02:02.887Z
 image: /img/amazon-gift-card.png
 image1: /img/amazon-gift-card-1.png
 image2: /img/amazon-gift-card-2.png
