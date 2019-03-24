@@ -6,6 +6,18 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "giftCards"
+    label: "Gift Cards"
+    folder: "src/pages/gift-cards"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "gift-card-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: Image, name: image, widget: image}
+      - {label: Image1, name: image1, widget: image}
+      - {label: Image2, name: image2, widget: image}
+      - {label: Image3, name: image3, widget: image}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
