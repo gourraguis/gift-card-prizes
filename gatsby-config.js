@@ -2,9 +2,9 @@ var proxy = require("http-proxy-middleware")
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Gift Card Prizes Generator Pro: Get Free Codes & Vouchers Online',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Gift Card Prizes is the best place to get Gift Card Codes for Free. It is time to generate your vouchers and get anything for free!',
   },
   plugins: [
     {
