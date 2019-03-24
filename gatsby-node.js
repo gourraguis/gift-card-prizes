@@ -90,7 +90,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       createNodeField({
         name: `title`,
         node,
-        value: `${node.frontmatter.title} Gift Card Free Generator`
+        value: `Free ${node.frontmatter.title} Gift Card Unused Codes Generator 2019`
       })
     } else {
       createNodeField({

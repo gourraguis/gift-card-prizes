@@ -1,10 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+
+const GiftCard = ({ image, title, disabled }) => (
+  <div className="column is-narrow">
+    <figure className={`image gift-card ${disabled ? 'gift-card-disabled' : ''}`}>
+      <img
+        src={image.childImageSharp ? image.childImageSharp.fluid.src : image}
+        alt={title}
+      />
+    </figure>
+  </div>
+)
 
 export const BlogPostTemplate = ({
   content,
@@ -13,32 +23,24 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  images
 }) => {
   const PostContent = contentComponent || Content
-
   return (
     <section className="section">
       {helmet || ''}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
+            <div className="columns">
+              <GiftCard image={images[0]} title="dummy"/>
+              <GiftCard image={images[1]} title="dummy"/>
+              <GiftCard image={images[2]} title="dummy" disabled/>
+            </div>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{description}</p>
             <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
           </div>
         </div>
       </div>
@@ -62,17 +64,18 @@ const BlogPost = ({ data }) => {
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
+        title={post.fields.title}
         description={post.frontmatter.description}
+        images={[post.frontmatter.image1, post.frontmatter.image2, post.frontmatter.image3]}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
+          <Helmet>
+            <title>{post.fields.title}</title>
             <meta
               name="description"
-              content={`${post.frontmatter.description}`}
+              content={post.frontmatter.description}
             />
           </Helmet>
         }
-        title={post.frontmatter.title}
       />
     </Layout>
   )
@@ -91,8 +94,11 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
-      frontmatter {
+      fields {
         title
+      }
+      frontmatter {
+        description
         image1 {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {

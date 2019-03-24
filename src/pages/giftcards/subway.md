@@ -1,6 +1,7 @@
 ---
 templateKey: gift-card-post
 title: Subway
+description: Get New Unused Subway Gift Card Codes, With Gift Card Prizes Pro Generator you can get Subway vouchers & codes that work for free
 seoValue: 1
 date: 2019-03-24T11:51:41.819Z
 image: /img/subway-gift-card.png
