@@ -1,14 +1,14 @@
 ---
 templateKey: 'index-page'
-title: 'Great coffee with a conscience'
+title: 'Free Gift Card Codes & Game Keys Generators'
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: 'Free Gift Card Codes & Game Keys Generators'
+subheading: Generate unused gift card codes for your favorite apps & games
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  Gift Card Prizes is the best place to get gift card codes for Free. It is time to generate your vouchers and 
+  enjoy all your favorite applications or games with unused codes that can allow you to get anything you want. Our pro
+  generator is always up to date and many peoples around the world use it on a daily basis. If you like our gift card 
+  generator or our game hacks, don't forget to support our cause. We are Anonymous, together we are stronger.
 mainpitch:
   sections:
     - title: How to get free gift cards?
