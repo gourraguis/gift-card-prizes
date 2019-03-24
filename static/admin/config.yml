@@ -8,11 +8,12 @@ public_folder: /img
 collections:
   - name: "giftCards"
     label: "Gift Cards"
-    folder: "src/pages/gift-cards"
+    folder: "src/pages/giftcards"
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "gift-card-post"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "SEO Value", name: "seoValue", widget: "number", default: 1, valueType: "int"}
       - {label: Image, name: image, widget: image}
       - {label: Image1, name: image1, widget: image}
       - {label: Image2, name: image2, widget: image}

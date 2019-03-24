@@ -1,0 +1,64 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link, graphql, StaticQuery } from "gatsby"
+
+const GiftCardsRoll = ({ data: { allMarkdownRemark: { edges: posts } } }) => (
+  <div className="columns is-multiline">
+    {posts &&
+      posts.map(({ node: { id, fields: { slug }, frontmatter: { title, templateKey, image } } }) => (
+        <div className="is-parent column is-4" key={id}>
+          <Link to={slug}>
+            <figure>
+              <img
+                src={image.childImageSharp ? image.childImageSharp.fluid.src : image}
+                alt={title}
+              />
+            </figure>
+          </Link>
+        </div>
+      ))
+    }
+    <p>lalalala</p>
+  </div>
+)
+
+GiftCardsRoll.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array
+    })
+  })
+}
+
+const GiftCardsRollContainer = () => (
+  <StaticQuery
+    query={graphql`
+      query GiftCardRollQuery {
+        allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___seoValue]}, filter: {frontmatter: {templateKey: {eq: "gift-card-post"}}}) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                templateKey
+                image {
+                  childImageSharp {
+                  fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={(data, count) => <GiftCardsRoll data={data} count={count}/>}
+  />
+)
+
+export default GiftCardsRollContainer
