@@ -4,45 +4,21 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import GiftCardsCta from '../components/GiftCardsCta'
 
-const GiftCard = ({ image, title, disabled }) => (
-  <div className="column is-narrow">
-    <figure className={`image gift-card ${disabled ? 'gift-card-disabled' : ''}`}>
-      <img
-        src={image.childImageSharp ? image.childImageSharp.fluid.src : image}
-        alt={title}
-      />
-    </figure>
-  </div>
-)
-
-export const BlogPostTemplate = ({
-  content,
-  contentComponent,
-  description,
-  tags,
-  title,
-  helmet,
-  images
-}) => {
+export const BlogPostTemplate = ({ content, contentComponent, title, service, helmet, images }) => {
   const PostContent = contentComponent || Content
+  //  todo: send service down to modalAnimation
   return (
     <section className="section">
       {helmet || ''}
       <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="columns">
-              <GiftCard image={images[0]} title="dummy"/>
-              <GiftCard image={images[1]} title="dummy"/>
-              <GiftCard image={images[2]} title="dummy" disabled/>
-            </div>
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <PostContent content={content} />
-          </div>
-        </div>
+        <GiftCardsCta images={images} service={service} title={title} />
+        <p className='content has-text-primary is-small has-text-weight-semibold'>P.S: New cards are added to the database daily at midnight</p>
+        <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+          {title}
+        </h1>
+        <PostContent content={content} />
       </div>
     </section>
   )
@@ -65,6 +41,7 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         title={post.fields.title}
+        service={post.frontmatter.title}
         description={post.frontmatter.description}
         images={[post.frontmatter.image1, post.frontmatter.image2, post.frontmatter.image3]}
         helmet={
@@ -98,6 +75,7 @@ export const pageQuery = graphql`
         title
       }
       frontmatter {
+        title
         description
         image1 {
           childImageSharp {

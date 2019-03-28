@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import GiftCardsRoll from '../components/GiftCardsRoll'
 
@@ -73,10 +72,10 @@ export const IndexPageTemplate = ({
             <div className="content">
               <div className="content">
                 {mainpitch.sections.map(({ title, text }) => (
-                  <>
+                  <div key={title}>
                     {title && <h2 className="title is-uppercase">{title}</h2>}
                     <p>{text}</p>
-                  </>
+                  </div>
                 ))}
               </div>
               <div className="columns">
