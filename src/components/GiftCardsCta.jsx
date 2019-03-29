@@ -23,16 +23,23 @@ const GiftCardsCta = ({ images, title, service }) => {
   useEffect(() => {
     setInterval(() => setSeconds(86400 - Math.floor((Date.now() % 86400000) / 1000)), 500)
   })
+
   const cardsLeft = [
     `${Math.floor(seconds * .55)} Left`,
     `${Math.floor(seconds * .34)} Left`,
     `Sorry, 0 left`
   ]
+  const titles = [
+    '$25 Gift Cards',
+    '$50 Gift Cards',
+    '$100 Gift Cards'
+  ]
+
   return (
     <div className="columns is-multiline" style={{ justifyContent: "center" }}>
-      <GiftCard image={images[0]} cardsLeft={cardsLeft[0]} title="$25 Gift Cards" cta={setModalActive}/>
-      <GiftCard image={images[1]} cardsLeft={cardsLeft[1]} title="$50 Gift Cards" cta={setModalActive}/>
-      <GiftCard image={images[2]} cardsLeft={cardsLeft[2]} title="$100 Gift Cards" cta={setModalActive} disabled/>
+      {[1, 2, 3].map(i => (
+        <GiftCard image={images[i]} cardsLeft={cardsLeft[i]} title={titles[i]} cta={setModalActive} disabled={i === 3}/>
+      ))}
       {isModalActive && <ModalAnimation
         media={images[2].childImageSharp ? images[2].childImageSharp.fluid.src : images[2]}
         title={title}

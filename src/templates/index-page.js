@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
-import GiftCardsRoll from '../components/GiftCardsRoll'
+import GiftCardsShortList from '../components/GiftCardsRoll/GiftCardsFullList'
 
 export const IndexPageTemplate = ({
                                     image,
@@ -86,7 +86,7 @@ export const IndexPageTemplate = ({
                   <p>{description}</p>
                 </div>
               </div>
-              <GiftCardsRoll/>
+              <GiftCardsShortList />
               <div className="columns">
                 <div className="column is-12 has-text-centered">
                   <Link className="btn" to="/gift-cards">

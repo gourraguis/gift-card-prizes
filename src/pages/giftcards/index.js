@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Layout from '../../components/Layout'
-import GiftCardsRoll from '../../components/GiftCardsRoll'
+import GiftCardsFullList from '../../components/GiftCardsRoll/GiftCardsFullList'
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -29,7 +29,7 @@ export default class BlogIndexPage extends React.Component {
                 </h1>
               </div>
             </div>
-            <GiftCardsRoll />
+            <GiftCardsFullList />
           </div>
         </section>
       </Layout>
