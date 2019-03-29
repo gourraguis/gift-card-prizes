@@ -5,6 +5,9 @@ description: >-
   Get New Unused Ebay Gift Card Codes, With Gift Card Prizes Pro Generator you
   can get Ebay vouchers & codes that work for free
 seoValue: 1
+related:
+  - Best Buy
+  - Amazon
 date: 2019-03-28T19:53:41.733Z
 image: /img/ebay-gift-card.png
 image1: /img/ebay-gift-card-1.png

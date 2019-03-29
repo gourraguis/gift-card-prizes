@@ -2,7 +2,10 @@
 templateKey: gift-card-post
 title: Amazon
 description: Get New Unused Amazon Gift Card Codes, With Gift Card Prizes Pro Generator you can get Amazon vouchers & codes that work for free
-seoValue: 1
+seoValue: 10
+related:
+  - Home Depot
+  - Best Buy
 date: 2019-03-24T11:02:02.887Z
 image: /img/amazon-gift-card.png
 image1: /img/amazon-gift-card-1.png

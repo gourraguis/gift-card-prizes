@@ -5,6 +5,9 @@ description: >-
   Get New Unused Nordstorm Gift Card Codes, With Gift Card Prizes Pro Generator
   you can get Nordstorm vouchers & codes that work for free
 seoValue: 1
+related:
+  - PlayStation
+  - Steam
 date: 2019-03-28T07:03:47.733Z
 image: /img/nordstorm-gift-card.png
 image1: /img/nordstorm-gift-card-1.png

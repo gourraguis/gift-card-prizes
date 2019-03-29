@@ -3,6 +3,9 @@ templateKey: gift-card-post
 title: Fandango
 description: Get New Unused Fandango Gift Card Codes, With Gift Card Prizes Pro Generator you can get Fandango vouchers & codes that work for free
 seoValue: 1
+related:
+  - Starbucks 
+  - AMC
 date: 2019-03-24T11:50:29.452Z
 image: /img/fandango-gift-card.png
 image1: /img/fandango-gift-card-1.png

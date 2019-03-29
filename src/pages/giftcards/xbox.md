@@ -5,6 +5,9 @@ description: >-
   Get New Unused Xbox Gift Card Codes, With Gift Card Prizes Pro Generator you
   can get Xbox vouchers & codes that work for free
 seoValue: 1
+related:
+  - iTunes
+  - Google Play
 date: 2019-03-28T07:31:24.730Z
 image: /img/xbox-gift-card.png
 image1: /img/xbox-gift-card-1.png

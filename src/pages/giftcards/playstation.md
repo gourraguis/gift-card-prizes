@@ -5,6 +5,9 @@ description: >-
   Get New Unused PlayStation Gift Card Codes, With Gift Card Prizes Pro
   Generator you can get PlayStation vouchers & codes that work for free
 seoValue: 1
+related:
+  - Xbox
+  - Google Play
 date: 2019-03-28T07:36:21.880Z
 image: /img/playstation-gift-card.png
 image1: /img/playstation-gift-card-1.png

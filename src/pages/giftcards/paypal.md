@@ -5,6 +5,9 @@ description: >-
   Get New Unused PayPal Gift Card Codes, With Gift Card Prizes Pro Generator you
   can get PayPal vouchers & codes that work for free
 seoValue: 1
+related:
+  - Xbox
+  - Visa
 date: 2019-03-28T19:52:36.598Z
 image: /img/paypal-gift-card.png
 image1: /img/paypal-gift-card-1.png

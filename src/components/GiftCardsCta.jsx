@@ -37,8 +37,15 @@ const GiftCardsCta = ({ images, title, service }) => {
 
   return (
     <div className="columns is-multiline" style={{ justifyContent: "center" }}>
-      {[1, 2, 3].map(i => (
-        <GiftCard image={images[i]} cardsLeft={cardsLeft[i]} title={titles[i]} cta={setModalActive} disabled={i === 3}/>
+      {[0, 1, 2].map(i => (
+        <GiftCard
+          image={images[i]}
+          cardsLeft={cardsLeft[i]}
+          title={titles[i]}
+          cta={setModalActive}
+          disabled={i === 2}
+          key={i}
+        />
       ))}
       {isModalActive && <ModalAnimation
         media={images[2].childImageSharp ? images[2].childImageSharp.fluid.src : images[2]}

@@ -5,6 +5,9 @@ description: >-
   Get New Unused Steam Gift Card Codes, With Gift Card Prizes Pro Generator you
   can get Steam vouchers & codes that work for free
 seoValue: 1
+related:
+  - Xbox
+  - iTunes
 date: 2019-03-28T06:36:45.730Z
 image: /img/steam-gift-card.png
 image1: /img/steam-gift-card-1.png

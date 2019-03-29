@@ -5,6 +5,9 @@ description: >-
   Get New Unused Mastercard Gift Card Codes, With Gift Card Prizes Pro Generator
   you can get Mastercard vouchers & codes that work for free
 seoValue: 1
+related:
+  - Visa
+  - Uber
 date: 2019-03-28T19:44:12.075Z
 image: /img/mastercard-gift-card.png
 image1: /img/mastercard-gift-card-1.png

@@ -4,11 +4,11 @@ import { graphql, StaticQuery } from "gatsby"
 import GiftCardsRoll from './GiftCardsRoll'
 import { extractPosts } from './utils'
 
-const GiftCardsFullList = () => (
+const GiftCardsShortList = () => (
   <StaticQuery
     query={graphql`
-      query GiftCardFullList {
-        allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___seoValue]}, filter: {frontmatter: {templateKey: {eq: "gift-card-post"}}}) {
+      query GiftCardShortList {
+        allMarkdownRemark(limit: 4, sort: {order: DESC, fields: [frontmatter___seoValue]}, filter: {frontmatter: {templateKey: {eq: "gift-card-post"}}}) {
           edges {
             node {
               id
@@ -35,4 +35,4 @@ const GiftCardsFullList = () => (
   />
 )
 
-export default GiftCardsFullList
+export default GiftCardsShortList

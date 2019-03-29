@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from "gatsby"
 
-const GiftCardsRoll = ({ data: { allMarkdownRemark: { edges: posts } } }) => (
+const GiftCardsRoll = ({ posts }) => (
   <div className="columns is-multiline">
     {posts &&
-      posts.map(({ node: { id, fields: { slug, title }, frontmatter: { templateKey, image } } }) => (
-        <div className="column is-narrow" key={id}>
+      posts.map(({ title, slug, image }) => (
+        <div className="column is-narrow" key={slug}>
           <Link to={slug}>
             <figure className="image gift-card">
               <img

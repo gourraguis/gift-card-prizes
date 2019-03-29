@@ -5,6 +5,9 @@ description: >-
   Get New Unused Spotify Gift Card Codes, With Gift Card Prizes Pro Generator
   you can get Spotify vouchers & codes that work for free
 seoValue: 1
+related:
+  - iTunes
+  - Google Play
 date: 2019-03-28T07:17:38.361Z
 image: /img/spotify-gift-card.png
 image1: /img/spotify-gift-card-1.png

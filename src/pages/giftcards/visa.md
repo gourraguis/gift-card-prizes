@@ -5,6 +5,9 @@ description: >-
   Get New Unused Visa Gift Card Codes, With Gift Card Prizes Pro Generator you
   can get Visa vouchers & codes that work for free
 seoValue: 1
+related:
+  - Amazon
+  - PayPal
 date: 2019-03-28T07:18:09.428Z
 image: /img/visa-gift-card.png
 image1: /img/visa-gift-card-1.png

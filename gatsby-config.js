@@ -6,6 +6,9 @@ module.exports = {
     description:
       'Gift Card Prizes is the best place to get Gift Card Codes for Free. It is time to generate your vouchers and get anything for free!',
   },
+  mapping: {
+    'MarkdownRemark.frontmatter.related': 'MarkdownRemark.frontmatter.title'
+  },
   plugins: [
     {
       resolve: 'gatsby-plugin-robots-txt',

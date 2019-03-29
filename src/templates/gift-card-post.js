@@ -1,12 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
+
+
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import GiftCardsCta from '../components/GiftCardsCta'
+import GiftCardsRoll from '../components/GiftCardsRoll/GiftCardsRoll'
 
-export const BlogPostTemplate = ({ content, contentComponent, title, service, helmet, images }) => {
+export const BlogPostTemplate = ({ content, contentComponent, title, service, helmet, images, relatedGiftCards }) => {
   const PostContent = contentComponent || Content
   //  todo: send service down to modalAnimation
   return (
@@ -19,6 +22,12 @@ export const BlogPostTemplate = ({ content, contentComponent, title, service, he
           {title}
         </h1>
         <PostContent content={content} />
+        <h2 className="title is-size-3">
+          RELATED GIFT CARDS
+        </h2>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <GiftCardsRoll posts={relatedGiftCards} />
+        </div>
       </div>
     </section>
   )
@@ -34,7 +43,11 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-
+  const relatedGiftCards = post.frontmatter.related.map(p => ({
+    title: p.fields.title,
+    slug: p.fields.slug,
+    image: p.frontmatter.image
+  }))
   return (
     <Layout>
       <BlogPostTemplate
@@ -44,6 +57,7 @@ const BlogPost = ({ data }) => {
         service={post.frontmatter.title}
         description={post.frontmatter.description}
         images={[post.frontmatter.image1, post.frontmatter.image2, post.frontmatter.image3]}
+        relatedGiftCards={relatedGiftCards}
         helmet={
           <Helmet>
             <title>{post.fields.title}</title>
@@ -77,6 +91,21 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        related {
+          fields {
+            title
+            slug
+          }
+          frontmatter {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
         image1 {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
