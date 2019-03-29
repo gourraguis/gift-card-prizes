@@ -2,7 +2,7 @@
 templateKey: gift-card-post
 title: iTunes
 description: Get New Unused iTunes Gift Card Codes, With Gift Card Prizes Pro Generator you can get iTunes vouchers & codes that work for free
-seoValue: 1
+seoValue: 10
 related:
   - Netflix
   - Google Play

@@ -8,7 +8,7 @@ const GiftCardsShortList = () => (
   <StaticQuery
     query={graphql`
       query GiftCardShortList {
-        allMarkdownRemark(limit: 4, sort: {order: DESC, fields: [frontmatter___seoValue]}, filter: {frontmatter: {templateKey: {eq: "gift-card-post"}}}) {
+        allMarkdownRemark(limit: 8, sort: {order: DESC, fields: [frontmatter___seoValue]}, filter: {frontmatter: {templateKey: {eq: "gift-card-post"}}}) {
           edges {
             node {
               id

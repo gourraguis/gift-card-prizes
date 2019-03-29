@@ -4,7 +4,7 @@ title: Google Play
 description: >-
   Get New Unused Google Play Gift Card Codes, With Gift Card Prizes Pro
   Generator you can get Google Play vouchers & codes that work for free
-seoValue: 1
+seoValue: 20
 related:
   - Amazon 
   - Xbox

@@ -1,10 +1,10 @@
 ---
 templateKey: gift-card-post
-title: Paypal
+title: PayPal
 description: >-
   Get New Unused PayPal Gift Card Codes, With Gift Card Prizes Pro Generator you
   can get PayPal vouchers & codes that work for free
-seoValue: 1
+seoValue: 20
 related:
   - Xbox
   - Visa

@@ -1,6 +1,6 @@
 ---
 templateKey: gift-card-post
-title: Mastercard
+title: MasterCard
 description: >-
   Get New Unused Mastercard Gift Card Codes, With Gift Card Prizes Pro Generator
   you can get Mastercard vouchers & codes that work for free

@@ -5,6 +5,9 @@ description: >-
   Get New Unused AMC Gift Card Codes, With Gift Card Prizes Pro Generator you
   can get AMC vouchers & codes that work for free
 seoValue: 1
+related:
+  - Google Play
+  - Starbucks
 date: 2019-03-29T21:40:04.437Z
 image: /img/amc-gift-card.png
 image1: /img/amc-gift-card-1.png

@@ -4,7 +4,7 @@ title: Uber
 description: >-
   Get New Unused Uber Gift Card Codes, With Gift Card Prizes Pro Generator you
   can get Uber vouchers & codes that work for free
-seoValue: 1
+seoValue: 10
 related:
   - Amazon
   - Netflix

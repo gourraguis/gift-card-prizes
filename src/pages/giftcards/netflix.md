@@ -4,7 +4,7 @@ title: Netflix
 description: >-
   Get New Unused Netflix Gift Card Codes, With Gift Card Prizes Pro Generator
   you can get Netflix vouchers & codes that work for free
-seoValue: 1
+seoValue: 20
 related:
   - Dunkin' Donuts
   - Spotify
