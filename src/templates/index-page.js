@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import BlogRoll from '../components/BlogRoll'
+import AppsRoll from '../components/AppsRoll'
 import GiftCardsShortList from '../components/GiftCardsRoll/GiftCardsShortList'
 
 export const IndexPageTemplate = ({
@@ -96,11 +96,11 @@ export const IndexPageTemplate = ({
               </div>
               <div className="column is-12">
                 <h3 className="has-text-weight-semibold is-size-2">
-                  Latest games
+                  Latest apps
                 </h3>
-                <BlogRoll />
+                <AppsRoll />
                 <div className="column is-12 has-text-centered">
-                  <Link className="btn" to="/games">
+                  <Link className="btn" to="/apps">
                     See more
                   </Link>
                 </div>

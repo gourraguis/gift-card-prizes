@@ -9,7 +9,7 @@ import Content, { HTMLContent } from '../components/Content'
 import GiftCardsCta from '../components/GiftCardsCta'
 import GiftCardsRoll from '../components/GiftCardsRoll/GiftCardsRoll'
 
-export const BlogPostTemplate = ({ content, contentComponent, title, service, helmet, images, relatedGiftCards }) => {
+export const GiftCardPostTemplate = ({ content, contentComponent, title, service, helmet, images, relatedGiftCards }) => {
   const PostContent = contentComponent || Content
   //  todo: send service down to modalAnimation
   return (
@@ -33,7 +33,7 @@ export const BlogPostTemplate = ({ content, contentComponent, title, service, he
   )
 }
 
-BlogPostTemplate.propTypes = {
+GiftCardPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -41,7 +41,7 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const BlogPost = ({ data }) => {
+const GiftCardPost = ({ data }) => {
   const { markdownRemark: post } = data
   const relatedGiftCards = post.frontmatter.related.map(p => ({
     title: p.fields.title,
@@ -50,7 +50,7 @@ const BlogPost = ({ data }) => {
   }))
   return (
     <Layout>
-      <BlogPostTemplate
+      <GiftCardPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         title={post.fields.title}
@@ -72,13 +72,13 @@ const BlogPost = ({ data }) => {
   )
 }
 
-BlogPost.propTypes = {
+GiftCardPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default BlogPost
+export default GiftCardPost
 
 export const pageQuery = graphql`
   query GiftCardPostByID($id: String!) {
